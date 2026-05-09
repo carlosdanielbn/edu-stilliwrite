@@ -1,0 +1,11 @@
+
+Build command:
+Leave empty
+
+Build output directory:
+/
+
+Custom domain:
+edu.stilliwrite.org
+
+No API variables needed yet.
