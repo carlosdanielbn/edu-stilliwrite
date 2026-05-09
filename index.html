@@ -1,306 +1,129 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>edu.stilliwrite.org</title>
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>edu.stilliwrite.org</title>
+<link rel="stylesheet" href="src/styles/global.css">
 </head>
 <body>
 
 <header class="navbar">
-  <div class="logo">
-    <span class="logo-mark">✦</span>
-    <span>edu.stilliwrite.org</span>
-  </div>
+<div class="logo">✦ edu.stilliwrite.org</div>
 
-  <nav>
-    <a href="#vision">Vision</a>
-    <a href="#grades">Grades</a>
-    <a href="#subjects">Subjects</a>
-    <a href="#future">Future</a>
-  </nav>
+<nav>
+<a href="#grades">Grades</a>
+<a href="#subjects">Subjects</a>
+<a href="#accessibility">Accessibility</a>
+</nav>
+
+<div class="language-switch">
+<button id="englishBtn">EN</button>
+<button id="spanishBtn">ES</button>
+</div>
 </header>
 
 <section class="hero">
-  <div class="hero-overlay"></div>
+<div class="hero-content">
+<p class="eyebrow" id="heroEyebrow">Education Reimagined</p>
 
-  <div class="floating floating-1">π</div>
-  <div class="floating floating-2">DNA</div>
-  <div class="floating floating-3">42</div>
-  <div class="floating floating-4">Earth</div>
-  <div class="floating floating-5">A+</div>
+<h1 id="heroTitle">
+Learning should inspire curiosity and wonder.
+</h1>
 
-  <div class="hero-content">
-    <p class="eyebrow">Education Reimagined</p>
-
-    <h1>
-      Learning should awaken
-      curiosity, wonder,
-      and imagination.
-    </h1>
-
-    <p class="hero-description">
-      A cinematic educational platform designed to help children learn
-      through clarity, beauty, exploration, and interactive storytelling.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="#grades" class="primary-btn">Explore Grades</a>
-      <a href="#vision" class="secondary-btn">Our Vision</a>
-    </div>
-  </div>
-
-  <div class="scroll-indicator">
-    Scroll
-  </div>
+<p class="hero-description" id="heroDescription">
+A modern educational platform focused on accessibility,
+cinematic learning, and multilingual experiences.
+</p>
+</div>
 </section>
 
-<section class="story-section" id="vision">
-  <div class="sticky-panel">
-    <div class="story-text">
-      <p class="section-label">A New Educational Experience</p>
+<section class="architecture-section" id="grades">
+<div class="section-heading">
+<p class="section-label">Grade System</p>
+<h2>Structured elementary education.</h2>
+</div>
 
-      <h2>
-        Not just information.
-        A place where children
-        genuinely want to learn.
-      </h2>
+<div class="grid">
 
-      <p>
-        Most educational platforms feel outdated, overwhelming, or emotionally disconnected.
-        edu.stilliwrite.org was imagined differently:
-        elegant interfaces, calm design, cinematic motion, and lessons crafted to inspire curiosity.
-      </p>
-    </div>
+<div class="card">
+<div class="circle">K</div>
+<h3>Kindergarten</h3>
+<p>Early literacy and exploration.</p>
+</div>
 
-    <div class="story-visual">
-      <div class="glass-card">
-        <div class="card-glow"></div>
-        <h3>Interactive Learning</h3>
-        <p>
-          Scroll-driven storytelling inspired by premium modern interfaces.
-        </p>
-      </div>
+<div class="card">
+<div class="circle">1</div>
+<h3>Grade 1</h3>
+<p>Reading, mathematics and science foundations.</p>
+</div>
 
-      <div class="glass-card">
-        <div class="card-glow"></div>
-        <h3>Structured Curriculum</h3>
-        <p>
-          Organized by grade level and subject using the U.S. elementary school system.
-        </p>
-      </div>
+<div class="card">
+<div class="circle">2</div>
+<h3>Grade 2</h3>
+<p>Problem solving and communication.</p>
+</div>
 
-      <div class="glass-card">
-        <div class="card-glow"></div>
-        <h3>Beautiful Simplicity</h3>
-        <p>
-          Clean, intuitive, distraction-free educational experiences.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="grades-section" id="grades">
-
-  <div class="section-heading">
-    <p class="section-label">Elementary School</p>
-    <h2>Organized by grade level</h2>
-    <p>
-      Every grade contains structured subjects, lessons, interactive activities,
-      and educational resources designed with care.
-    </p>
-  </div>
-
-  <div class="grades-grid">
-
-    <div class="grade-card">
-      <div class="grade-number">K</div>
-      <h3>Kindergarten</h3>
-      <p>Early literacy, numbers, shapes, language, creativity, and discovery.</p>
-      <button>Open Grade</button>
-    </div>
-
-    <div class="grade-card">
-      <div class="grade-number">1</div>
-      <h3>Grade 1</h3>
-      <p>Reading fundamentals, addition, nature, social interaction, and communication.</p>
-      <button>Open Grade</button>
-    </div>
-
-    <div class="grade-card">
-      <div class="grade-number">2</div>
-      <h3>Grade 2</h3>
-      <p>Building confidence through problem-solving and independent thinking.</p>
-      <button>Open Grade</button>
-    </div>
-
-    <div class="grade-card">
-      <div class="grade-number">3</div>
-      <h3>Grade 3</h3>
-      <p>Multiplication, reading comprehension, ecosystems, and geography.</p>
-      <button>Open Grade</button>
-    </div>
-
-    <div class="grade-card">
-      <div class="grade-number">4</div>
-      <h3>Grade 4</h3>
-      <p>Advanced reading, fractions, science systems, and early history.</p>
-      <button>Open Grade</button>
-    </div>
-
-    <div class="grade-card">
-      <div class="grade-number">5</div>
-      <h3>Grade 5</h3>
-      <p>Critical thinking, advanced mathematics, biology, and civic understanding.</p>
-      <button>Open Grade</button>
-    </div>
-
-  </div>
+</div>
 </section>
 
 <section class="subjects-section" id="subjects">
+<div class="section-heading">
+<p class="section-label">Subjects</p>
+<h2>Knowledge organized beautifully.</h2>
+</div>
 
-  <div class="section-heading">
-    <p class="section-label">Subjects</p>
-    <h2>Designed to feel alive</h2>
-    <p>
-      Each subject will have unique visual storytelling, immersive learning,
-      and motion-driven educational sections.
-    </p>
-  </div>
+<div class="grid">
 
-  <div class="subjects-grid">
+<div class="card">
+<h3>Mathematics</h3>
+<p>Patterns, numbers and geometry.</p>
+</div>
 
-    <div class="subject-card math">
-      <div class="subject-icon">∑</div>
-      <h3>Mathematics</h3>
-      <p>
-        Numbers, patterns, geometry, logic, measurements, and problem solving.
-      </p>
-    </div>
+<div class="card">
+<h3>Science</h3>
+<p>Nature, biology and experimentation.</p>
+</div>
 
-    <div class="subject-card science">
-      <div class="subject-icon">⚛</div>
-      <h3>Science</h3>
-      <p>
-        Nature, planets, biology, chemistry, ecosystems, and experimentation.
-      </p>
-    </div>
+<div class="card">
+<h3>English</h3>
+<p>Language and storytelling.</p>
+</div>
 
-    <div class="subject-card english">
-      <div class="subject-icon">✎</div>
-      <h3>English</h3>
-      <p>
-        Reading comprehension, vocabulary, grammar, communication, and storytelling.
-      </p>
-    </div>
-
-    <div class="subject-card history">
-      <div class="subject-icon">⌛</div>
-      <h3>History</h3>
-      <p>
-        Civilizations, historical figures, timelines, and global events.
-      </p>
-    </div>
-
-    <div class="subject-card geography">
-      <div class="subject-icon">🌎</div>
-      <h3>Geography</h3>
-      <p>
-        Continents, countries, maps, cultures, and Earth's systems.
-      </p>
-    </div>
-
-    <div class="subject-card civics">
-      <div class="subject-icon">⚖</div>
-      <h3>Civics & Ethics</h3>
-      <p>
-        Respect, empathy, citizenship, values, and community responsibility.
-      </p>
-    </div>
-
-  </div>
+</div>
 </section>
 
-<section class="apple-section">
+<section class="accessibility-section" id="accessibility">
+<div class="section-heading">
+<p class="section-label">Accessibility</p>
+<h2>Education for everyone.</h2>
+</div>
 
-  <div class="apple-panel">
-    <div class="panel-left">
-      <p class="section-label">Immersive Motion</p>
-      <h2>
-        Inspired by the elegance of modern cinematic web experiences.
-      </h2>
+<div class="grid">
 
-      <p>
-        Smooth scrolling, depth, animated reveals, layered motion, and premium transitions
-        help children remain engaged without overwhelming them.
-      </p>
-    </div>
+<div class="card">
+<h3>Visual Accessibility</h3>
+<p>High contrast, larger text, reduced motion.</p>
+</div>
 
-    <div class="panel-right">
-      <div class="device-frame">
-        <div class="screen-content">
-          <div class="fake-ui"></div>
-          <div class="fake-ui"></div>
-          <div class="fake-ui"></div>
-          <div class="fake-ui large"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="card">
+<h3>Navigation Accessibility</h3>
+<p>Keyboard navigation and screen readers.</p>
+</div>
 
-</section>
+<div class="card">
+<h3>Audio Accessibility</h3>
+<p>Text-to-speech and narration support.</p>
+</div>
 
-<section class="future-section" id="future">
-
-  <div class="section-heading">
-    <p class="section-label">Future Expansion</p>
-    <h2>This is only the beginning</h2>
-  </div>
-
-  <div class="timeline">
-
-    <div class="timeline-item">
-      <span>Phase 1</span>
-      <h3>Elementary Foundation</h3>
-      <p>
-        Grades K–5 with core educational subjects and elegant learning experiences.
-      </p>
-    </div>
-
-    <div class="timeline-item">
-      <span>Phase 2</span>
-      <h3>Interactive Lessons</h3>
-      <p>
-        Quizzes, progress systems, achievements, and guided exploration.
-      </p>
-    </div>
-
-    <div class="timeline-item">
-      <span>Phase 3</span>
-      <h3>Advanced Motion & AI</h3>
-      <p>
-        Personalized educational experiences and intelligent adaptive learning.
-      </p>
-    </div>
-
-  </div>
-
+</div>
 </section>
 
 <footer class="footer">
-  <h2>edu.stilliwrite.org</h2>
-  <p>
-    Designed with curiosity, intention, and genuine love for education.
-  </p>
+<h2>edu.stilliwrite.org</h2>
+<p>Built with curiosity and accessibility.</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="src/components/translations.js"></script>
 </body>
 </html>
