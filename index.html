@@ -1,80 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>edu.stilliwrite.org</title>
-
-<link rel="stylesheet" href="styles.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header class="nav">
-  <div class="logo">✦ edu.stilliwrite</div>
+<a href="#main-content" class="skip-link">Skip to content</a>
 
-  <nav>
-    <a href="#grades" data-i18n="nav_grades"></a>
-    <a href="#subjects" data-i18n="nav_subjects"></a>
-    <a href="#accessibility" data-i18n="nav_accessibility"></a>
-  </nav>
+<header class="navbar">
+<div class="logo">✦ edu.stilliwrite</div>
 
-  <div class="lang">
-    <button onclick="setLang('en')">EN</button>
-    <button onclick="setLang('es')">ES</button>
-  </div>
+<nav>
+<a href="#grades" data-i18n="nav_grades"></a>
+<a href="#subjects" data-i18n="nav_subjects"></a>
+<a href="#accessibility" data-i18n="nav_accessibility"></a>
+<a href="#vision" data-i18n="nav_future"></a>
+</nav>
+
+<div class="nav-actions">
+<button class="lang-btn" onclick="setLanguage('en')">EN</button>
+<button class="lang-btn" onclick="setLanguage('es')">ES</button>
+<button class="access-btn" onclick="toggleAccessibilityPanel()">⚙</button>
+</div>
 </header>
 
+<aside id="accessibility-panel" class="accessibility-panel" aria-label="Accessibility Panel">
+<h2>Accessibility</h2>
+
+<div class="access-grid">
+<button onclick="increaseText()">A+</button>
+<button onclick="decreaseText()">A-</button>
+<button onclick="toggleContrast()">Contrast</button>
+<button onclick="toggleMotion()">Motion</button>
+<button onclick="toggleDyslexia()">Dyslexia Font</button>
+<button onclick="toggleFocusMode()">Focus Mode</button>
+</div>
+</aside>
+
+<main id="main-content">
+
 <section class="hero">
-  <div class="hero-content">
-    <h1 data-i18n="hero_title"></h1>
-    <p data-i18n="hero_subtitle"></p>
-  </div>
+<div class="hero-glow"></div>
+
+<div class="hero-content">
+<p class="eyebrow" data-i18n="hero_eyebrow"></p>
+<h1 data-i18n="hero_title"></h1>
+<p class="hero-description" data-i18n="hero_description"></p>
+
+<div class="hero-buttons">
+<a href="#grades" class="primary-btn" data-i18n="explore_btn"></a>
+<a href="#accessibility" class="secondary-btn" data-i18n="accessibility_btn"></a>
+</div>
+</div>
+</section>
+
+<section class="section cinematic">
+<div class="section-content">
+<p class="section-label">MISSION</p>
+<h2 data-i18n="mission_title"></h2>
+<p data-i18n="mission_description"></p>
+</div>
 </section>
 
 <section class="section" id="grades">
-  <h2 data-i18n="grades_title"></h2>
+<div class="section-content">
+<p class="section-label">GRADES</p>
+<h2 data-i18n="grades_title"></h2>
+<p data-i18n="grades_description"></p>
 
-  <div class="grid">
-
-    <div class="card">K</div>
-    <div class="card">1</div>
-    <div class="card">2</div>
-    <div class="card">3</div>
-    <div class="card">4</div>
-    <div class="card">5</div>
-
-  </div>
+<div class="card-grid">
+<div class="grade-card">Kindergarten</div>
+<div class="grade-card">Grade 1</div>
+<div class="grade-card">Grade 2</div>
+<div class="grade-card">Grade 3</div>
+<div class="grade-card">Grade 4</div>
+<div class="grade-card">Grade 5</div>
+</div>
+</div>
 </section>
 
 <section class="section" id="subjects">
-  <h2 data-i18n="subjects_title"></h2>
+<div class="section-content">
+<p class="section-label">SUBJECTS</p>
+<h2 data-i18n="subjects_title"></h2>
 
-  <div class="grid">
-    <div class="card">Math</div>
-    <div class="card">Science</div>
-    <div class="card">English</div>
-    <div class="card">History</div>
-    <div class="card">Geography</div>
-    <div class="card">Civics</div>
-  </div>
+<div class="subject-grid">
+<div class="subject-card">Mathematics</div>
+<div class="subject-card">Science</div>
+<div class="subject-card">English</div>
+<div class="subject-card">History</div>
+<div class="subject-card">Geography</div>
+<div class="subject-card">Civics & Ethics</div>
+</div>
+</div>
 </section>
 
 <section class="section" id="accessibility">
-  <h2 data-i18n="access_title"></h2>
+<div class="section-content">
+<p class="section-label">ACCESSIBILITY</p>
+<h2 data-i18n="accessibility_title"></h2>
+<p data-i18n="accessibility_description"></p>
 
-  <div class="access">
-    <button onclick="toggleContrast()">Contrast</button>
-    <button onclick="toggleMotion()">Reduce Motion</button>
-    <button onclick="increaseText()">A+</button>
-    <button onclick="decreaseText()">A-</button>
-  </div>
+<div class="feature-grid">
+<div class="feature-card">
+<h3>Visual Accessibility</h3>
+<ul>
+<li>High Contrast</li>
+<li>Reduce Motion</li>
+<li>Dyslexia Font</li>
+<li>Text Scaling</li>
+</ul>
+</div>
+
+<div class="feature-card">
+<h3>Keyboard Navigation</h3>
+<ul>
+<li>Focus indicators</li>
+<li>Skip links</li>
+<li>Accessible buttons</li>
+<li>Screen-reader structure</li>
+</ul>
+</div>
+
+<div class="feature-card">
+<h3>Audio & Cognitive</h3>
+<ul>
+<li>Future narration system</li>
+<li>Focus mode</li>
+<li>Simplified layouts</li>
+<li>Reduced distractions</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 
-<script src="i18n.js"></script>
-<script src="app.js"></script>
+<section class="section cinematic" id="vision">
+<div class="section-content">
+<p class="section-label">FUTURE</p>
+<h2 data-i18n="future_title"></h2>
+<p data-i18n="future_description"></p>
+</div>
+</section>
 
+</main>
+
+<footer class="footer">
+<h2>edu.stilliwrite.org</h2>
+<p>Education. Curiosity. Accessibility. Humanity.</p>
+</footer>
+
+<script src="translations.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
