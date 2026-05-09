@@ -4,126 +4,77 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>edu.stilliwrite.org</title>
-<link rel="stylesheet" href="src/styles/global.css">
+
+<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header class="navbar">
-<div class="logo">✦ edu.stilliwrite.org</div>
+<header class="nav">
+  <div class="logo">✦ edu.stilliwrite</div>
 
-<nav>
-<a href="#grades">Grades</a>
-<a href="#subjects">Subjects</a>
-<a href="#accessibility">Accessibility</a>
-</nav>
+  <nav>
+    <a href="#grades" data-i18n="nav_grades"></a>
+    <a href="#subjects" data-i18n="nav_subjects"></a>
+    <a href="#accessibility" data-i18n="nav_accessibility"></a>
+  </nav>
 
-<div class="language-switch">
-<button id="englishBtn">EN</button>
-<button id="spanishBtn">ES</button>
-</div>
+  <div class="lang">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('es')">ES</button>
+  </div>
 </header>
 
 <section class="hero">
-<div class="hero-content">
-<p class="eyebrow" id="heroEyebrow">Education Reimagined</p>
-
-<h1 id="heroTitle">
-Learning should inspire curiosity and wonder.
-</h1>
-
-<p class="hero-description" id="heroDescription">
-A modern educational platform focused on accessibility,
-cinematic learning, and multilingual experiences.
-</p>
-</div>
+  <div class="hero-content">
+    <h1 data-i18n="hero_title"></h1>
+    <p data-i18n="hero_subtitle"></p>
+  </div>
 </section>
 
-<section class="architecture-section" id="grades">
-<div class="section-heading">
-<p class="section-label">Grade System</p>
-<h2>Structured elementary education.</h2>
-</div>
+<section class="section" id="grades">
+  <h2 data-i18n="grades_title"></h2>
 
-<div class="grid">
+  <div class="grid">
 
-<div class="card">
-<div class="circle">K</div>
-<h3>Kindergarten</h3>
-<p>Early literacy and exploration.</p>
-</div>
+    <div class="card">K</div>
+    <div class="card">1</div>
+    <div class="card">2</div>
+    <div class="card">3</div>
+    <div class="card">4</div>
+    <div class="card">5</div>
 
-<div class="card">
-<div class="circle">1</div>
-<h3>Grade 1</h3>
-<p>Reading, mathematics and science foundations.</p>
-</div>
-
-<div class="card">
-<div class="circle">2</div>
-<h3>Grade 2</h3>
-<p>Problem solving and communication.</p>
-</div>
-
-</div>
+  </div>
 </section>
 
-<section class="subjects-section" id="subjects">
-<div class="section-heading">
-<p class="section-label">Subjects</p>
-<h2>Knowledge organized beautifully.</h2>
-</div>
+<section class="section" id="subjects">
+  <h2 data-i18n="subjects_title"></h2>
 
-<div class="grid">
-
-<div class="card">
-<h3>Mathematics</h3>
-<p>Patterns, numbers and geometry.</p>
-</div>
-
-<div class="card">
-<h3>Science</h3>
-<p>Nature, biology and experimentation.</p>
-</div>
-
-<div class="card">
-<h3>English</h3>
-<p>Language and storytelling.</p>
-</div>
-
-</div>
+  <div class="grid">
+    <div class="card">Math</div>
+    <div class="card">Science</div>
+    <div class="card">English</div>
+    <div class="card">History</div>
+    <div class="card">Geography</div>
+    <div class="card">Civics</div>
+  </div>
 </section>
 
-<section class="accessibility-section" id="accessibility">
-<div class="section-heading">
-<p class="section-label">Accessibility</p>
-<h2>Education for everyone.</h2>
-</div>
+<section class="section" id="accessibility">
+  <h2 data-i18n="access_title"></h2>
 
-<div class="grid">
-
-<div class="card">
-<h3>Visual Accessibility</h3>
-<p>High contrast, larger text, reduced motion.</p>
-</div>
-
-<div class="card">
-<h3>Navigation Accessibility</h3>
-<p>Keyboard navigation and screen readers.</p>
-</div>
-
-<div class="card">
-<h3>Audio Accessibility</h3>
-<p>Text-to-speech and narration support.</p>
-</div>
-
-</div>
+  <div class="access">
+    <button onclick="toggleContrast()">Contrast</button>
+    <button onclick="toggleMotion()">Reduce Motion</button>
+    <button onclick="increaseText()">A+</button>
+    <button onclick="decreaseText()">A-</button>
+  </div>
 </section>
 
-<footer class="footer">
-<h2>edu.stilliwrite.org</h2>
-<p>Built with curiosity and accessibility.</p>
-</footer>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
 
-<script src="src/components/translations.js"></script>
 </body>
 </html>
